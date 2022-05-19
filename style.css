@@ -1,0 +1,69 @@
+#avatarPic{
+    width: 80px;
+    height: 80px;
+}
+
+#name{
+    color: rgb(19, 167, 77);
+}
+
+#name:hover{
+    color: rgb(220, 99, 39);
+}
+
+@media only screen and (min-width: 1000px){
+    .part{
+        display: grid;
+        grid-template-columns: 238px max-content;
+    }
+    #avatarPic{
+        grid-column: 1;
+        width: 90%;
+        height: 100%;
+    }
+    #infNameandList{
+        grid-column: 2;
+    }
+    #time{
+        display: inline;
+    }
+    #btn{
+        display: inline;
+    }
+    #AboutMe{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 999px){
+    .part{
+        display: unset;
+    }
+    #avatarPic{
+        grid-column: unset;
+    }
+    #infNameandList{
+        grid-column: unset;
+    }
+    #time{
+        display: block;
+    }
+    #btn{
+        display: block;
+    }
+    #AboutMe{
+        display: block;
+    }
+}
+
+th{
+    font-weight: bolder;
+}
+
+.oddRows{
+    background-color: #924577;
+}
+
+.evenRows{
+    background-color: aquamarine;
+}

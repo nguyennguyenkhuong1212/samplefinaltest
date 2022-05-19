@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>COVID</title>
+</head>
+<body>
+    <div id="container">
+        <div class="part" id="info">
+            <img src="avatar.jpg" alt="Avatar Picture" id="avatarPic">
+            <div id="infNameandList">
+                <h2 id="name">Nguyen Nguyen Khuong</h2>
+                <ul id="infoList">
+                    <li>Birthdate: 12/12/2003.</li>
+                    <li>Career Objectives: Being a Data Analyst or Web Developer.</li>
+                    <li>Favorite Quote: What will be, will be.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="part" id="form">
+            <form action="display.php" method="get">
+                <h3 id="formHeading">COVID-19 Information</h3>
+                <select name="time" id="time">
+                    <option value="0" selected>--Select a time to display--</option>
+                    <option value="1">Latest 10 days</option>
+                    <option value="2">Latest 10 months</option>
+                </select>
+                <button id="btn" type="submit">View Report</button>
+                <a href="#" id="AboutMe">About me</a>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
