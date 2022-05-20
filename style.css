@@ -3,12 +3,16 @@
     height: 50%;
 }
 
+/* My student ID: s3924577 */
+
 #name{
+    /* 77 - my student ID two last numbers is for the blue component */
     color: rgb(19, 167, 77);
 }
 
 #name:hover{
-    color: rgb(220, 99, 39);
+    /* 39 - my student ID two first numbers is for the blue component */
+    color: rgb(255, 122, 39);
 }
 
 @media only screen and (min-width: 1000px){
