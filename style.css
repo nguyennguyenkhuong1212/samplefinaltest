@@ -1,6 +1,6 @@
 #avatarPic{
-    width: 80px;
-    height: 80px;
+    width: 50%;
+    height: 50%;
 }
 
 #name{
@@ -60,10 +60,10 @@ th{
     font-weight: bolder;
 }
 
-.oddRows{
+table tr:nth-child(2n + 1){
     background-color: #924577;
 }
 
-.evenRows{
+table tr:nth-child(2n){
     background-color: aquamarine;
 }

@@ -24,44 +24,35 @@
 <body>
     <h1>COVID Report</h1>
     <table>
-        <tr class="oddRows">
-            <td>Reported Date</td>
-            <td>Cumulative Cases</td>
+        <tr>
+            <th>Reported Date</th>
+            <th>Cumulative Cases</th>
         </tr>
         <?php if ($_GET["time"] == "1") : ?>
             <?php for($i = 1; $i <= 10; $i++) : ?>
-                <?php if ($i % 2 == 0) : ?>
-                    <tr class="oddRows">
-                        <td><?php echo $result[$i][0]?></td>
-                        <td><?php echo $result[$i][1]?></td>
-                    </tr>
-                <?php endif?>
-                <?php if ($i % 2 == 1) : ?>
-                    <tr class="evenRows">
-                        <td><?php echo $result[$i][0]?></td>
-                        <td><?php echo $result[$i][1]?></td>
-                    </tr>
-                <?php endif?>
+                <tr>
+                    <td><?php echo $result[$i][0]?></td>
+                    <td><?php echo $result[$i][1]?></td>
+                </tr>
             <?php endfor ?>
         <?php endif?>        
         <?php if ($_GET["time"] == "2") : ?>
-            <?php $i = 1; $j = 0;?>
-                <?php for(; $j<count($result); $j++) : ?>
-                    <?php if ($i>10) {break;}?>
-                    <?php $reportedDate = explode("/", $result[$j][0]);?>
-                    <?php if ($reportedDate[1] == "1") : ?>
-                        <?php if ($i % 2 == 0) : ?>
-                            <tr class="oddRows">
-                                <td><?php echo $result[$j][0]?></td>
-                                <td><?php echo $result[$j][1]?></td>
-                            </tr>
-                        <?php endif ?>
-                        <?php if ($i % 2 == 1) : ?>
-                            <tr class="evenRows">
-                                <td><?php echo $result[$j][0]?></td>
-                                <td><?php echo $result[$j][1]?></td>
-                            </tr>
-                        <?php endif ?>
+            <?php $i = 1;?>
+                <?php for($j = 0; $j<count($result); $j++) : ?>
+                    <?php 
+                        // If wrote enough 10 months
+                        if ($i>10) {
+                            break;
+                        }
+
+                        // Take the reported date to check if it is the first date of each month
+                        $reportedDate = explode("/", $result[$j][0]);
+                        if ($reportedDate[1] == "1") :
+                    ?>
+                        <tr>
+                            <td><?php echo $result[$j][0]?></td>
+                            <td><?php echo $result[$j][1]?></td>
+                        </tr>
                         <?php $i++; ?>
                     <?php endif ?>
                 <?php endfor ?>
